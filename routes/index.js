@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 var alert = require('alert');
-const TWILIO_ID = 'ACa248c3b00034fcc20f55b96b17e99ca9';
-const TWILIO_SK = '621c4204cfae9452dd1062937507f96d';
+const TWILIO_ID = '';
+const TWILIO_SK = '';
 const client = require('twilio')(TWILIO_ID,TWILIO_SK);
 const { unlink } = require('fs-extra');
 
