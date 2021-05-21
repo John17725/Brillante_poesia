@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/styles_menu.css">
+	<link rel="stylesheet" href="styles/styles_contact.css">
+	<script src="/js/jquery-3.2.1.js"></script>
+    <!--<script src="/js/script.js"></script-->
+	<script src="https://kit.fontawesome.com/a0f9c20aeb.js" crossorigin="anonymous"></script>
+	<title>Contacto</title>
+</head>
+<body>
+	<header>
+		<div class="header-content">
+			<div class="logo">
+				<h1>Poesia Brillante</h1>
+			</div>
+			<div class="menu">
+				<nav>
+					<ul>
+						<li class="menu-selected"><a href="/">Inicio</a></li>
+						<li class="menu-selected"><a href="/posts">Posts</a></li>
+						<li class="menu-selected"><a href="/blog" >Blog</a></li>
+						<li class="menu-selected"><a href="/contacto" class="text-menu-selected">Contacto</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="content-form">
+		<section class="form_wrap">
+	        <section class="cantact_info">
+	            <section class="info_title">
+	                <!-- <span class="fa fa-user-circle"></span> -->
+	                <h2>CONTACTAME<br>POR ESTOS MEDIOS</h2>
+	            </section>	    
+	            <section class="info_items">
+	                <p><span class="fa fa-envelope"></span> lalotapia232@gmail.com</p>
+	                <p><span class="fa fa-mobile"></span>+52 1 7122179970</p>
+	            </section>
+	        </section>
+	        <form action="/request" method="POST" class="form_contact">
+	            <h2>Ingresa tus datos correctamente</h2>
+	            <div class="user_info">
+	                <label for="names">Nombre(s)*</label>
+	                <input type="text" id="names" name="nombre">
+
+	                <label for="telefono">Telefono</label>
+	                <input type="text" id="telefono" placeholder="712 xxx xx" name="telefono">
+
+	                <label for="mensaje">Mensaje*</label>
+	                <textarea id="mensaje" name="mensaje"></textarea>
+
+	                <!-- <input type="button" value="Enviar Mensaje" id="btnSend"> -->
+	                <button type="submit" id="btnSend">Enviar Mensaje</button>
+	            </div>
+	        </form>
+	    </section>		
+	</div>
+</body>
+</html>

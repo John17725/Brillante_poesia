@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">	
+	<link rel="stylesheet" href="/styles/normalize.css">
+	<link rel="stylesheet" href="/styles/styles_menu.css">
+	<link rel="stylesheet" href="/styles/styles_posts.css">
+	<script src="https://kit.fontawesome.com/a0f9c20aeb.js" crossorigin="anonymous"></script>
+	<title>Posts</title>
+</head>
+<body>
+	<header>
+		<div class="header-content">
+			<div class="logo">
+				<h1>Brillante Poesia</h1>
+			</div>
+			<div class="menu">
+				<nav>
+					<ul>
+						<li class="menu-selected"><a href="/">Inicio</a></li>
+						<li class="menu-selected"><a href="/posts" class="text-menu-selected">Posts</a></li>
+						<li class="menu-selected"><a href="/blog" >Blog</a></li>
+						<li class="menu-selected"><a href="/contacto">Contacto</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<section class="contenedor-galeria">
+			<div class="grid-container">
+			<%images.forEach(function callback(image, index){%>
+					<img class="grid-item" src="<%= image.path %>" width="230" height="<%= Math.round(Math.random()*(500 - 400)+ 400)%>">
+			
+				<%}); %>
+			</div>
+			<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+			<script>
+				var elem = document.querySelector('.grid-container');
+				var msnry = new Masonry( elem, {
+				  // options
+				  itemSelector: '.grid-item',
+				  columnWidth: 230,
+				  gutter: 20,
+				  isFitWidth: true
+				});
+			</script>
+
+	</section>
+</body>
+</html>
