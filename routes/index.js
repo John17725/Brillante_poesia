@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 var alert = require('alert');
-const TWILIO_ID = '';
-const TWILIO_SK = '';
-const client = require('twilio')(TWILIO_ID,TWILIO_SK);
+//const TWILIO_ID = '';
+//const TWILIO_SK = '';
+//const client = require('twilio')(TWILIO_ID,TWILIO_SK);
 const { unlink } = require('fs-extra');
 
 router.use(express.static('public'));
@@ -86,13 +86,13 @@ router.post('/check_request', async(req, res) => {
 	const pet_up4 = await Petition.findByIdAndUpdate(value,{size: size_s});
 	const pet_up5 = await Petition.findByIdAndUpdate(value,{status: true});
 	// console.log(await Petition.findById(value))
-	client.messages
-	  .create({
-	     from: 'whatsapp:+14155238886',
-	     body: `Gracias por usar nuestro servicio`,
-	     to: 'whatsapp:+5217121642397'
-	   })
-	  .then(message => console.log(message.sid));
+	// client.messages
+	//   .create({
+	//      from: 'whatsapp:+14155238886',
+	//      body: `Gracias por usar nuestro servicio`,
+	//      to: 'whatsapp:+5217121642397'
+	//    })
+	//   .then(message => console.log(message.sid));
 	res.redirect('/panel')
 })
 
